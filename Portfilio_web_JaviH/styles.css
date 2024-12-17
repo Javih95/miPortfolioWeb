@@ -1,0 +1,68 @@
+/* Contenedor principal: Grid de 12 columnas */
+.layout {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* 12 columnas iguales */
+    grid-gap: 20px; /* Espacio entre columnas */
+    height: 100vh;
+}
+/* Barra de navegación: ocupa 1 columna */
+.nav-left {
+    grid-column: 1 / 2;;
+    z-index: 600;
+    width: 10%; /* Opcionalmente puedes aumentar el ancho */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+
+.nav-left ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* Elementos en columna */
+    justify-content: center; /* Centrado vertical */
+    align-items: center; /* Centrado horizontal */
+    gap: 60px; /* Mayor separación para evitar encimado */
+    height: 100%; /* Ocupar todo el contenedor */
+}
+
+.nav-left-item {
+    transform: rotate(-90deg); /* Rotar texto */
+    transform-origin: center; /* Rotar desde el centro */
+    white-space: nowrap; /* Evita el salto de línea */
+    font-size: 12px; /* Reduce ligeramente el tamaño de fuente si es necesario */
+    text-align: center;
+}
+
+.nav-left-item a {
+    letter-spacing: 5px;
+    text-decoration: none;
+    display: block;
+}
+/* Contenido principal: cada uno ocupa 4 columnas */
+.content1 {
+    grid-column: 2 / 5; /* Ocupa 4 columnas */
+    background-color: #eaeaea;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.content1 h2{
+    margin-top:0;
+    margin-bottom: 0;
+} 
+.content2 {
+    grid-column: 5/12; /* Ocupa 4 columnas */
+    background-color: #cfcfcf;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 42px;
+}
